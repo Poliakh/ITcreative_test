@@ -1,0 +1,27 @@
+@import "font-fase.css";
+
+.ficha {
+	/* background-color: #d30e0e; */
+	background-image: url('../img/bg1.jpg');
+	background-size: cover;
+	width: 308px;
+	height: 265px;
+	position: relative;
+}
+
+.bg-cont {
+	fill: #087c1b;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 52px;
+	width: 100%;
+	transform: rotate(-45deg);
+	position: absolute;
+}
+.path{
+	fill:rgba(255, 0, 0, 0.226);
+	/* fill-rule:nonzero; */
+	fill-rule:evenodd;
+	clip-rule:evenodd;
+}
