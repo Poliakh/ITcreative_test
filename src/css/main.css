@@ -7,8 +7,12 @@
 	red:#d7014d
 	yelow:#fdcf10
 	blue:#000851
-
 */
+/* _:-ms-fullscreen,
+:root .cardSlide__saleval {
+	  условие для IE11
+}*/
+
 * {
 	margin: 0;
 	padding: 0;
@@ -41,4 +45,9 @@ body {
 	min-width: 900px;
 	margin: 0 auto;
 	padding: 0 15px;
+}
+
+.hidden{
+	visibility: hidden;
+	display: none;
 }
