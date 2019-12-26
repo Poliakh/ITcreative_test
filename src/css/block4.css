@@ -1,0 +1,87 @@
+.order {
+	min-height: 1450px;
+	background-color: #000851;
+}
+.order .select {
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+}
+.select__slide {
+	width: 420px;
+	height: 600px;
+	border-radius: 40px;
+	background: #740fe0; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #740fe0 39%, #ca2663 100%, #ca2663 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #740fe0 39%, #ca2663 100%, #ca2663 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(
+		45deg,
+		#740fe0 39%,
+		#ca2663 100%,
+		#ca2663 100%
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#740fe0', endColorstr='#ca2663',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	z-index: 5;
+	box-shadow: 2px 2px 6px 6px #0000001c;
+}
+.select__by {
+	width: 682px;
+	height: 500px;
+	background-color: #d2ecfe;
+	border-radius: 0 40px 40px 0;
+	margin-top: 50px;
+	z-index: 1;
+	margin-left: -50px;
+}
+.select__decs{
+	width: 458px;
+	min-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.select__head{
+	display: flex;
+	margin-top: 39px;
+}
+.select__logo{
+	width: 154px;
+	height: 40px;
+	stroke: #000851;
+	margin-right: 19px;
+}
+.select__header{
+	font-size: 30px;
+}
+.select__slider{
+	display: flex;
+}
+.select__img{
+	width: 107px;
+	height: 71px;
+	margin-right: 10px;
+}
+.select__button {
+	width: 280px;
+	height: 44px;
+	color:#ffffffd6;;
+	border: none;
+	border-radius: 9px;
+	text-transform: uppercase;
+	font-size: 18px;
+	letter-spacing: 2px;
+	background: #740fe0; /* Old browsers */
+	background: -moz-linear-gradient(left, #740fe0 0%, #ca2663 100%, #ca2663 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #740fe0 0%, #ca2663 100%, #ca2663 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(
+		to right,
+		#740fe0 0%,
+		#ca2663 100%,
+		#ca2663 100%
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#740fe0', endColorstr='#ca2663',GradientType=1 ); /* IE6-9 */
+	margin-bottom: 35px;
+}

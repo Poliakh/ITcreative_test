@@ -147,6 +147,7 @@ gulp.task('sass', () => {
 
 gulp.task('style', () => {
 	gulp.src(path.src.css)
+		.pipe(plumber())
 		// .pipe(concat('style.css'))
 		//.pipe(cssnano())
 		//.pipe(rename({suffix:'.min'}))
