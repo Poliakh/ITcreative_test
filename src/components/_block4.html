@@ -23,8 +23,9 @@
 			<img src="../img/Photo/top_black@1X.png" alt="Туфли красные" class="cardSlide__outimg front">
 			<img src="../img/Photo/top_brown@1X.png" alt="Туфли красные" class="cardSlide__outimg">
 		</div>
-
-		<div class="select__cardBy cardBy">
+		<!-- 	start	select__cardBy -->
+		<a name="cardBy"></a>
+		<div  class="select__cardBy cardBy">
 			<div class="cardBy__decs">
 				<div class="cardBy__head">
 					<svg class="cardBy__logo">
@@ -35,58 +36,65 @@
 				<div class="cardBy__cost">
 					<span class="cardBy__cost-old">3690 грн</span><span class="cardBy__cost-new">1379 грн</span>
 				</div>
-				<form class="cardBy__form" action="">
-					<div class="select-wrapper">
-						<div class="select-arrow-3"></div>
-						<div class="select__place select__place-cyrcle">Цвет:</div>
-						<select class="cardBy__in" name="color" id="">
-							<!-- <optionvalue="black">Черный</option>
-							<option value="red">Красный</option> -->
-						</select>
-					</div>
-					<div class="select-wrapper">
-						<div class="select-arrow-3"></div>
-						<div class="select__place select__place">Размер:</div>
-						<select class="cardBy__in" name="color" id="">
-							<!-- <option value="42">42</option>
-							<option value="43">43</option>
-							<option value="44">44</option> -->
-						</select>
-					</div>
-					<input class="cardBy__inp" type="text" placeholder="Имя">
-					<input class="cardBy__inp" type="text" placeholder="Телефон">
-				</form>
-				<ul hidden class="cardBy_list">
-					<li class="cardBy__item"><span class="item__cat">Сезон:</span><span class="item__val">Осень
-							2019</span></li>
-					<li class="cardBy__item"><span class="item__cat">Вид товара:</span><span
-							class="item__val">Кроссовки</span></li>
-					<li class="cardBy__item"><span class="item__cat">Каблук:</span><span class="item__val">Ниже 30 мм
-						</span></li>
-					<li class="cardBy__item"><span class="item__cat">Верх:</span><span class="item__val">Натуральная
-							телячья кожа</span></li>
-					<li class="cardBy__item"><span class="item__cat">Подошва:</span><span
-							class="item__val">Термополиуретан</span></li>
-					<li class="cardBy__item"><span class="item__cat">Стиль:</span><span class="item__val">Ежедневный
-							(casual)</span></li>
-				</ul>
-				<div class="cardBy__slider">
-					<img src="./img/Photo/1@x0.25.jpg" alt="Черная модель" class="cardBy__img">
-					<img src="./img/Photo/2@x0.25.jpg" alt="Черная модель" class="cardBy__img">
-					<!-- over card -->
-					<img src="./img/Photo/3@x0.25.jpg" alt="Черная модель" class="cardBy__img">
-					<img src="./img/Photo/4@x0.25.jpg" alt="Черная модель" class="cardBy__img">
+				<div class="cardBy__wrapper">
+					<form class="cardBy__form" action="">
+						<div class="select-wrapper">
+							<div class="select-arrow-3"></div>
+							<div class="select__place select__place-cyrcle">Цвет:</div>
+							<select class="cardBy__in" name="color" id="">
+								<!-- <optionvalue="black">Черный</option>
+								<option value="red">Красный</option> -->
+							</select>
+						</div>
+						<div class="select-wrapper">
+							<div class="select-arrow-3"></div>
+							<div class="select__place select__place">Размер:</div>
+							<select class="cardBy__in" name="color" id="">
+								<!-- <option value="42">42</option>
+								<option value="43">43</option>
+								<option value="44">44</option> -->
+							</select>
+						</div>
+						<input class="cardBy__inp" type="text" placeholder="Имя">
+						<input class="cardBy__inp" type="text" placeholder="Телефон">
+					</form>
+					<button class="cardBy__button cardBy__button-form">Заказать</button>
+					<button class="cardBy__back">
+						<svg class="cardBy__symb">
+							<use xlink:href="#larr"></use>
+						</svg>
+						<span>Назад к характеристикам</span>
+					</button>
 				</div>
-				<button class="cardBy__button">Заказать</button>
+				<div class="hide cardBy__wrapper">
+					<ul class="cardBy_list">
+						<li class="cardBy__item"><span class="item__cat">Сезон:</span><span class="item__val">Осень
+								2019</span></li>
+						<li class="cardBy__item"><span class="item__cat">Вид товара:</span><span
+								class="item__val">Кроссовки</span></li>
+						<li class="cardBy__item"><span class="item__cat">Каблук:</span><span class="item__val">Ниже 30
+								мм
+							</span></li>
+						<li class="cardBy__item"><span class="item__cat">Верх:</span><span class="item__val">Натуральная
+								телячья кожа</span></li>
+						<li class="cardBy__item"><span class="item__cat">Подошва:</span><span
+								class="item__val">Термополиуретан</span></li>
+						<li class="cardBy__item"><span class="item__cat">Стиль:</span><span class="item__val">Ежедневный
+								(casual)</span></li>
+					</ul>
+					<div class="cardBy__slider">
+						<img src="./img/Photo/1@x0.25.jpg" alt="Черная модель" class="cardBy__img">
+						<img src="./img/Photo/2@x0.25.jpg" alt="Черная модель" class="cardBy__img">
+						<!-- over card -->
+						<img src="./img/Photo/3@x0.25.jpg" alt="Черная модель" class="cardBy__img">
+						<img src="./img/Photo/4@x0.25.jpg" alt="Черная модель" class="cardBy__img">
+					</div>
+					<button class="cardBy__button">Заказать</button>
+				</div>
 
-				<button class="cardBy__back">
-					<svg class="cardBy__symb">
-						<use xlink:href="#larr"></use>
-					</svg>
-					<span>Назад к характеристикам</span>
-				</button>
 			</div>
 		</div>
+		<!-- 	end	select__cardBy  -->
 	</div>
 
 
@@ -97,6 +105,7 @@
 				<div class="cardSlide__sale">
 					<div class="cardSlide__saleval">60%</div>
 				</div>
+	
 				<div class="cardSlide__control">
 					<button class="cardSlide__but">
 						<svg class="cardSlide__symb">
@@ -110,6 +119,13 @@
 					</button>
 				</div>
 			</div>
+			<div class="cardSlide__sliderspray sliderSpray">
+				<div class="sliderSpray__wrapper">
+					<img class="sliderSpray__img" src="../img/spray1.png" alt="Спрей для обуви хороший">
+					<img class="cardSlide__spray" src="../img/spray2.png" alt="Спрей для обуви совсем хорший">
+				</div>
+			</div>
+
 		</div>
 
 		<div class="cardBy purchase__cardBy">
@@ -123,12 +139,18 @@
 				<div class="cardBy__cost">
 					<span class="cardBy__cost-old">3690 грн</span><span class="cardBy__cost-new">1379 грн</span>
 				</div>
-				<div class="purchase__spray">
-					
+				<div class="purchase__spray cardBy__wrapper">
+					<div class="purchase__text">
+						Высоко-концентрированный спрей для ног и коленей активирует метаболические процессы, оказывает дренирующее действие, улучшает силуэт. Спрей устраняет отеки, снимает судороги в икроножных мышцах, боли и напряжение в ногах.
+					</div>
+					<form class="cardBy__form" action="">
+						<input class="cardBy__inp" type="text" placeholder="Имя">
+						<input class="cardBy__inp" type="text" placeholder="Телефон">
+					</form>
+
+					<button class="cardBy__button">Заказать</button>
 				</div>
-				<button class="cardBy__button">Заказать</button>
 			</div>
 		</div>
-	</div>
 
-</div>
+	</div>

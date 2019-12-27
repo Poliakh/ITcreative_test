@@ -10,7 +10,7 @@
 .blockslide__cont {
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	margin-top: 100px;
 	overflow: hidden;
 	margin-right: auto;
@@ -20,6 +20,8 @@
 	min-width: 300px;
 	height: 201px;
 	margin-right: 45px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 .galeryDesc__header {
 	font-size: 40px;
@@ -36,6 +38,7 @@
 	width: 1139px;
 	height: 600px;
 	margin-right: -125px;
+	margin-left: auto;
 	position: relative;
 }
 .slider__button {
@@ -45,12 +48,11 @@
 	border-radius: 50%;
 	border: none;
 	position: absolute;
-	outline:#fdcf10;
+	outline: #fdcf10;
 	left: -50px;
 	bottom: 50px;
 	transition: background-color 0.8s, transform 0.15s;
 	box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.199);
-
 }
 .slider__button span {
 	width: 100%;
@@ -62,17 +64,15 @@
 	position: relative;
 	bottom: 4px;
 }
-.slider__button:hover{
+.slider__button:hover {
 	background-color: #c40044;
 	cursor: pointer;
 	transform: translate(-2px, -2px);
 	box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.199);
-	transition: background-color 0.2s,transform 0.2s;
-
-
+	transition: background-color 0.2s, transform 0.2s;
 }
-.slider__button:active{
-	background-color:#d7014d;
+.slider__button:active {
+	background-color: #d7014d;
 	transition: background-color 0.2s;
 	cursor: pointer;
 	transform: translate(-1px, -1px);
@@ -92,5 +92,23 @@
 	object-fit: cover;
 	margin-right: 30px;
 	border-radius: 2px;
-	
 }
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1024px) {
+	.blockslide {
+		min-height: 800px;
+		background-color: #fdcf10;
+		background-image: url(../img/bg2@x1.png);
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: cover;
+		font-family: "MyriadPro-Regular";
+	}
+}
+
+@media screen and (max-width: 750px) {
+}
+
+

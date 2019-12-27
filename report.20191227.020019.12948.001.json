@@ -1,0 +1,317 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "location": "OnFatalError",
+    "filename": "report.20191227.020019.12948.001.json",
+    "dumpEventTime": "2019-12-27T02:00:19Z",
+    "processId": 12948,
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:/Users/Roman/AppData/Roaming/npm/node_modules/gulp-cli/bin/gulp.js"
+    ],
+    "nodejsVersion": "v11.10.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "11.10.0",
+      "v8": "7.0.276.38-node.17",
+      "uv": "1.26.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "67",
+      "nghttp2": "1.34.0",
+      "napi": "4",
+      "llhttp": "1.1.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1a",
+      "cldr": "34.0",
+      "icu": "63.1",
+      "tz": "2018e",
+      "unicode": "11.0"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v11.10.0/node-v11.10.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v11.10.0/node-v11.10.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v11.10.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18362",
+    "osVersion": "Windows 10 Education",
+    "osMachine": "x86_64",
+    "host": "Drum-WorkPC"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff626bfdd6e",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff626bfcc36",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff626bfc4a2",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff626cfa3ed",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6270f0f1e",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6270f0e57",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6271a0e74",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62719697e",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff627195068",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62719eab7",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62719eb36",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6273278e1",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6273e0cea",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00000014e3350461",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 80039936,
+    "totalCommittedMemory": 80039936,
+    "usedMemory": 68256184,
+    "availableMemory": 1455398792,
+    "memoryLimit": 1526909922,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 524288,
+        "committedMemory": 524288,
+        "capacity": 515584,
+        "used": 33520,
+        "available": 482064
+      },
+      "new_space": {
+        "memorySize": 1048576,
+        "committedMemory": 1048576,
+        "capacity": 1031168,
+        "used": 1031152,
+        "available": 16
+      },
+      "old_space": {
+        "memorySize": 64163840,
+        "committedMemory": 64163840,
+        "capacity": 63001760,
+        "used": 56316008,
+        "available": 6685752
+      },
+      "code_space": {
+        "memorySize": 3670016,
+        "committedMemory": 3670016,
+        "capacity": 3505440,
+        "used": 2502272,
+        "available": 1003168
+      },
+      "map_space": {
+        "memorySize": 2633728,
+        "committedMemory": 2633728,
+        "capacity": 2581424,
+        "used": 1773600,
+        "available": 807824
+      },
+      "large_object_space": {
+        "memorySize": 7999488,
+        "committedMemory": 7999488,
+        "capacity": 1453019600,
+        "used": 6599632,
+        "available": 1446419968
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 0,
+        "used": 0,
+        "available": 0
+      }
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "=C:": "C:\\MyProject\\ITcreative_test",
+    "ACLOCAL_PATH": "C:\\cmder\\vendor\\git-for-windows\\mingw64\\share\\aclocal;C:\\cmder\\vendor\\git-for-windows\\usr\\share\\aclocal",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "ANSICON": "89x1000 (89x33)",
+    "ANSICON_DEF": "7",
+    "APPDATA": "C:\\Users\\Roman\\AppData\\Roaming",
+    "CMDER_ROOT": "C:/cmder",
+    "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "DRUM-WORKPC",
+    "COMSPEC": "C:\\WINDOWS\\system32\\cmd.exe",
+    "CONFIG_SITE": "C:/cmder/vendor/git-for-windows/mingw64/etc/config.site",
+    "C_EM64T_REDIST11": "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "ConEmuANSI": "ON",
+    "ConEmuAnsiLog": "",
+    "ConEmuArgs2": "",
+    "ConEmuArgs": "/Icon \"C:\\cmder\\icons\\cmder.ico\" /Title Cmder",
+    "ConEmuBackHWND": "0x00010904",
+    "ConEmuBaseDir": "C:\\cmder\\vendor\\conemu-maximus5\\ConEmu",
+    "ConEmuBaseDirShort": "C:\\cmder\\vendor\\conemu-maximus5\\ConEmu",
+    "ConEmuBuild": "180626",
+    "ConEmuCfgDir": "C:\\cmder\\vendor\\conemu-maximus5",
+    "ConEmuConfig": "",
+    "ConEmuDir": "C:\\cmder\\vendor\\conemu-maximus5",
+    "ConEmuDrawHWND": "0x00010906",
+    "ConEmuDrive": "C:",
+    "ConEmuHWND": "0x000308EC",
+    "ConEmuHooks": "Enabled",
+    "ConEmuIsAdmin": "ADMIN",
+    "ConEmuPID": "13452",
+    "ConEmuPalette": "Monokai",
+    "ConEmuServerPID": "13580",
+    "ConEmuTask": "{bash::bash as Admin}",
+    "ConEmuWorkDir": "C:\\MyProject\\ITcreative_test",
+    "ConEmuWorkDrive": "C:",
+    "DISPLAY": "needs-to-be-defined",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "EXEPATH": "C:\\cmder\\vendor\\git-for-windows\\bin",
+    "HOME": "C:\\Users\\Roman",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\Roman",
+    "HOSTNAME": "Drum-WorkPC",
+    "INFOPATH": "C:\\cmder\\vendor\\git-for-windows\\usr\\local\\info;C:\\cmder\\vendor\\git-for-windows\\usr\\share\\info;C:\\cmder\\vendor\\git-for-windows\\usr\\info;C:\\cmder\\vendor\\git-for-windows\\share\\info",
+    "INIT_CWD": "C:\\MyProject\\ITcreative_test",
+    "KEYSHOT8": "C:\\Users\\Public\\Documents\\KeyShot 8",
+    "LANG": "ru_RU.UTF-8",
+    "LOCALAPPDATA": "C:\\Users\\Roman\\AppData\\Local",
+    "LOGONSERVER": "\\\\DRUM-WORKPC",
+    "MANPATH": "C:\\cmder\\vendor\\git-for-windows\\mingw64\\local\\man;C:\\cmder\\vendor\\git-for-windows\\mingw64\\share\\man;C:\\cmder\\vendor\\git-for-windows\\usr\\local\\man;C:\\cmder\\vendor\\git-for-windows\\usr\\share\\man;C:\\cmder\\vendor\\git-for-windows\\usr\\man;C:\\cmder\\vendor\\git-for-windows\\share\\man",
+    "MINGW_CHOST": "x86_64-w64-mingw32",
+    "MINGW_PACKAGE_PREFIX": "mingw-w64-x86_64",
+    "MINGW_PREFIX": "C:/cmder/vendor/git-for-windows/mingw64",
+    "MSYSTEM": "MINGW64",
+    "MSYSTEM_CARCH": "x86_64",
+    "MSYSTEM_CHOST": "x86_64-w64-mingw32",
+    "MSYSTEM_PREFIX": "C:/cmder/vendor/git-for-windows/mingw64",
+    "NUMBER_OF_PROCESSORS": "8",
+    "OLDPWD": "C:/cmder/config/profile.d",
+    "ORIGINAL_PATH": "C:\\cmder\\vendor\\git-for-windows\\mingw64\\bin;C:\\cmder\\vendor\\git-for-windows\\usr\\bin;C:\\Users\\Roman\\bin;C:\\cmder\\vendor\\conemu-maximus5\\ConEmu\\Scripts;C:\\cmder\\vendor\\conemu-maximus5;C:\\cmder\\vendor\\conemu-maximus5\\ConEmu;C:\\Program Files (x86)\\Intel\\iCLS Client;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\iCLS Client;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit;C:\\Program Files\\nodejs;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;C:\\Users\\Roman\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Roman\\AppData\\Roaming\\npm;C:\\Users\\Roman\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Program Files\\heroku\\bin",
+    "ORIGINAL_TEMP": "C:/Users/Roman/AppData/Local/Temp",
+    "ORIGINAL_TMP": "C:/Users/Roman/AppData/Local/Temp",
+    "OS": "Windows_NT",
+    "OneDrive": "C:\\Users\\Roman\\OneDrive",
+    "PATH": "C:\\Users\\Roman\\bin;C:\\cmder\\bin;C:\\cmder\\vendor\\bin;C:\\Program Files\\Git\\bin;C:\\cmder\\vendor\\git-for-windows\\mingw64\\bin;C:\\cmder\\vendor\\git-for-windows\\usr\\local\\bin;C:\\cmder\\vendor\\git-for-windows\\usr\\bin;C:\\cmder\\vendor\\git-for-windows\\usr\\bin;C:\\cmder\\vendor\\git-for-windows\\mingw64\\bin;C:\\cmder\\vendor\\git-for-windows\\usr\\bin;C:\\Users\\Roman\\bin;C:\\cmder\\vendor\\conemu-maximus5\\ConEmu\\Scripts;C:\\cmder\\vendor\\conemu-maximus5;C:\\cmder\\vendor\\conemu-maximus5\\ConEmu;C:\\Program Files (x86)\\Intel\\iCLS Client;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\iCLS Client;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit;C:\\Program Files\\nodejs;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;C:\\Users\\Roman\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Roman\\AppData\\Roaming\\npm;C:\\Users\\Roman\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Program Files\\heroku\\bin;C:\\cmder;C:\\cmder\\vendor\\git-for-windows\\usr\\bin\\vendor_perl;C:\\cmder\\vendor\\git-for-windows\\usr\\bin\\core_perl",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+    "PKG_CONFIG_PATH": "C:\\cmder\\vendor\\git-for-windows\\mingw64\\lib\\pkgconfig;C:\\cmder\\vendor\\git-for-windows\\mingw64\\share\\pkgconfig",
+    "PLINK_PROTOCOL": "ssh",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 158 Stepping 9, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "9e09",
+    "PROGRAMFILES": "C:\\Program Files",
+    "PROMPT": "$P$G",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "PVIEW_KEYSHOT8_HOME": "C:\\Program Files\\KeyShot8\\bin\\",
+    "PWD": "C:/MyProject/ITcreative_test",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "SHELL": "C:\\cmder\\vendor\\git-for-windows\\usr\\bin\\bash.exe",
+    "SHLVL": "2",
+    "SSH_ASKPASS": "C:/cmder/vendor/git-for-windows/mingw64/libexec/git-core/git-gui--askpass",
+    "SYSTEMDRIVE": "C:",
+    "SYSTEMROOT": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\Roman\\AppData\\Local\\Temp",
+    "TERM": "cygwin",
+    "TMP": "C:\\Users\\Roman\\AppData\\Local\\Temp",
+    "TMPDIR": "C:\\Users\\Roman\\AppData\\Local\\Temp",
+    "USERDOMAIN": "DRUM-WORKPC",
+    "USERDOMAIN_ROAMINGPROFILE": "DRUM-WORKPC",
+    "USERNAME": "Roman",
+    "USERPROFILE": "C:\\Users\\Roman",
+    "WINDIR": "C:\\WINDOWS",
+    "_": "C:/Program Files/nodejs/node",
+    "__COMPAT_LAYER": "RunAsAdmin Installer"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\SYSTEM32\\apphelp.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\MSASN1.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\System32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\System32\\profapi.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\SYSTEM32\\winmmbase.dll",
+    "C:\\WINDOWS\\System32\\cfgmgr32.dll",
+    "C:\\WINDOWS\\System32\\bcryptPrimitives.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\cmder\\vendor\\conemu-maximus5\\ConEmu\\ConEmuHk64.dll",
+    "C:\\WINDOWS\\System32\\powrprof.dll",
+    "C:\\WINDOWS\\System32\\UMPDC.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\System32\\kernel.appcore.dll",
+    "\\\\?\\C:\\MyProject\\ITcreative_test\\node_modules\\node-sass\\vendor\\win32-x64-67\\binding.node",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\system32\\wshbth.dll"
+  ]
+}

@@ -16,6 +16,8 @@
 * {
 	margin: 0;
 	padding: 0;
+	outline: none;
+
 }
 
 li {
@@ -42,10 +44,11 @@ body {
 
 .container {
 	max-width: 1920px;
-	min-width: 900px;
+	min-width: 290px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
+
 
 .hidden{
 	visibility: hidden;
