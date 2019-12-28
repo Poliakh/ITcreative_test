@@ -8,10 +8,12 @@
 	yelow:#fdcf10
 	blue:#000851
 */
-/* _:-ms-fullscreen,
+/*
+ _:-ms-fullscreen,
 :root .cardSlide__saleval {
 	  условие для IE11
-}*/
+}
+*/
 
 * {
 	margin: 0;

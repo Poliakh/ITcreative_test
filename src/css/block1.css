@@ -357,10 +357,15 @@ body {
 		margin-left: 4vw;
 	}
 	.prom__image {
-		width: 80%;
+		
+	}
+	_:-ms-fullscreen,
+	:root .prom__image {
+		width: 600px;
 		margin-right: auto;
 		margin-left: auto;
 	}
+
 	.listDesc__item-l {
 		right: 59%;
 		top: -58px;
@@ -376,13 +381,11 @@ body {
 
 }
 @media screen and (max-width: 750px) {
-	.banner {
-	}
 	.banner__head {
 		background-image: url(../img/bg4@x1_2.png);
 		background-size: 100% auto;
 		background-position: left top;
-		background-color: #981791;
+		background-color: #9e39c0;
 
 		/* min-height: 799px; */
 	}
@@ -404,6 +407,13 @@ body {
 		font-size: 36px;
 		margin-bottom: 34px;
 	}
+	_:-ms-fullscreen,
+	:root .prom__image {
+		width: 400px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
 	.head__bootblack {
 		width: 200px;
 		height: 171px;
@@ -477,3 +487,20 @@ body {
 	}
 		
 }
+
+@media screen and (max-width: 450px) {
+
+_:-ms-fullscreen,
+	:root .prom__image {
+		width: 300px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.container {
+		max-width: 1920px;
+		min-width: 290px;
+		margin: 0 auto;
+		padding: 0 5px;
+	}
+}
+

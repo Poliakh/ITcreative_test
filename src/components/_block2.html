@@ -1,19 +1,38 @@
 <div class="blockslide">
 	<div class="blockslide__cont">
-		<div class="galeryDesc">
-			<h3 class="galeryDesc__header">Lorem ipsum</h3>
-			<p class="galeryDesc__text">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-
-			</p>
-		</div>
+		<dev class="blockslide__wrapper">
+			<div class=" blockslide__desc">
+				<h3 class="blockslide__header">Lorem ipsum</h3>
+				<p class="blockslide__text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+	
+				</p>
+			</div>
+		</dev>
 		<div class="slider">
-			<button class="slider__button"><span>&larr;</span></button>
+			<!-- <button class="slider__button"><span>&larr;</span></button> -->
 			<div class="slider__list">
 				<img class="slider__img" src="../img/gallery/1@x1.jpg" alt="Обувь на модели">
 				<img class="slider__img" src="../img/gallery/2@x1.jpg" alt="Обувь на модели">
 				<img class="slider__img" src="../img/gallery/3@x1.jpg" alt="Обувь на модели">
 				<img class="slider__img" src="../img/gallery/4@x1.jpg" alt="Обувь на модели">
+			</div>
+			<div class="slider__control">
+				<button class="slider__button">
+					<svg class="slider__symb">
+						<use xlink:href="#larr"></use>
+					</svg>
+				</button>
+				<div class="slider__indicat">
+					<div class="slider__reg"></div>
+					<div class="slider__reg slider__reg-active"></div>
+					<div class="slider__reg"></div>
+				</div>
+				<button class="slider__button slider__button-r">
+					<svg class="slider__symb">
+						<use xlink:href="#rarr"></use>
+					</svg>
+				</button>
 			</div>
 		</div>
 	</div>
