@@ -56,7 +56,7 @@ let path = {
 	},
 	dir: 'build',
 	// produc:'../poliakh.github.io/myportfolio',
-	produc: './production',
+	produc: 'C:/MyProject/Frontend - HOME/Portfolio/poliakh.github.io/myportfolio/site/itcreative_test',
 	test: 'test'
 };
 
@@ -73,7 +73,7 @@ gulp.task('create', () => {
 	gulp.start('build');
 	gulp.start('my');
 	gulp.src(path.dir)
-		.pipe(gulp.dest(path.produc))
+	.pipe(gulp.dest(path.produc))
 });
 
 // watch
@@ -188,7 +188,7 @@ gulp.task('server', () => {
 	})
 });
 
-gulp.task('img', () => {
+gulp.task('img',['clear'], () => {
 	gulp.src(path.src.img)
 		// .pipe(cache(imagemin([
 		// 	imagemin.gifsicle({interlaced: true}),
