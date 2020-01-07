@@ -32,7 +32,7 @@ let path = {
 		html: 'build/',
 		js: 'build/script/',
 		style: 'build/css/',
-		img: 'build/img/',
+		img: 'build/img',
 		fonts: 'build/fonts/'
 	},
 	src: { //Пути откуда брать исходники
@@ -188,8 +188,8 @@ gulp.task('server', () => {
 	})
 });
 
-gulp.task('img',['clear'], () => {
-	gulp.src(path.src.img)
+gulp.task('img', () => {
+	return gulp.src(path.src.img)
 		// .pipe(cache(imagemin([
 		// 	imagemin.gifsicle({interlaced: true}),
 		// 	imagemin.jpegtran({progressive: true}),
@@ -233,11 +233,10 @@ gulp.task('clean', () => {
 });
 gulp.task('cleanProd', () => {
 	del.sync(
-		["../poliakh.github.io/myportfolio/css",
-			"../poliakh.github.io/myportfolio/fonts",
-			"../poliakh.github.io/myportfolio/img",
-			"../poliakh.github.io/myportfolio/preview",
-			"../poliakh.github.io/myportfolio/script",
+		["../poliakh.github.io/myportfolio/site/itcreative_test/css",
+			"../poliakh.github.io/myportfolio//site/itcreative_test/fonts",
+			"../poliakh.github.io/myportfolio//site/itcreative_test/img",
+			"../poliakh.github.io/myportfolio//site/itcreative_test/script",
 			"../poliakh.github.io/myportfolio/index.html"],
 		{ 'force': true });
 });
