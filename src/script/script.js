@@ -8,7 +8,6 @@ const sliderSpray = new Slider('purchase__cardSlide', 'sliderSpray__wrapper', 's
 
 const sliderPopup = new Slider('popup__slider', 'popup__list', 'popup__img', 'btnLeft', 'btnRight', null, 500);
 
-//select__cardSlide
 class SelectShoe {
 	constructor(wrapper, btn_l, btn_r, wrapShoeSelect, btnListDesc, color) {
 		this.wrapper = document.querySelector(`.${wrapper}`);

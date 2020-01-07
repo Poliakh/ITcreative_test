@@ -12,6 +12,7 @@ class Slider {
 		this.addEvent();
 		this.resize();
 		this.indicateInit();
+		
 	}
 	indicateInit() {
 		if (this.indicate) {
@@ -24,7 +25,7 @@ class Slider {
 			for (let i = 0; i < this.listImg.length; i++) {
 				fragment.appendChild(clonElem.cloneNode());
 			}
-			this.indicate.append(fragment);
+			this.indicate.appendChild(fragment);
 			this.indicate.firstElementChild.classList.add(this.classNameActive);
 		}
 	}
@@ -54,66 +55,69 @@ class Slider {
 		const elem = this.list.querySelector(`.${this.img}`);
 		const computedStyle = getComputedStyle(elem);
 		return parseInt(computedStyle.marginRight) + elem.offsetWidth;
+
 	}
+
 	moveList(direction) {
 		const offset = this.getwidthImage();
 		const offsetLeft = (isNaN(parseInt(this.list.style.left))) ? 0 : parseInt(this.list.style.left);
 		if (direction == 'left') {
-			this.addAfter();
+			this.addAfter()
 			this.list.style.left = offsetLeft - offset + 'px';
 			setTimeout(() => {
 				const offsetComp = -(offsetLeft - offset) + 'px';
 				this.list.style.transform = 'translateX(' + offsetComp + ')';
-				this.addEvent();
+				// this.addEvent();
 			}, this.timeout);
 			this.indicateActive('next');
 
-		} else if (direction == 'right') {
+		}  else if (direction == 'right') {
 			this.addBefore()
 			const offsetComp = - (offsetLeft + offset) + 'px';
 			this.list.style.transform = 'translateX(' + offsetComp + ')';
 			this.list.style.left = offsetLeft + offset + 'px';
 			this.removeEvent();
 			setTimeout(() => {
-				this.addEvent();
-			}, this.timeout)
-			this.indicateActive('prev')
+				// this.addEvent();
+			}, this.timeout);
+			this.indicateActive('prev');
 		}
 	}
+
 	addAfter() {
 		const firstElem = this.list.firstElementChild;
 		const cloneElem = firstElem.cloneNode();
 		this.list.appendChild(cloneElem);
 		this.removeEvent();
 		setTimeout(() => {
-			this.list.firstElementChild.remove();
-		}, this.timeout)
+			const firstElem = this.list.firstElementChild
+			this.list.removeChild(firstElem);
+		}, this.timeout);
 	}
 	addBefore() {
 		const firstElem = this.list.firstElementChild;
 		const cloneLastElem = this.list.lastElementChild.cloneNode();
 		this.list.insertBefore(cloneLastElem, firstElem);
 		setTimeout(() => {
-			this.list.lastElementChild.remove();
+			const lastElem = this.list.lastElementChild;
+			this.list.removeChild(lastElem);
 		}, this.timeout)
 	}
-	event = (e) => {
-		console.log(e.target);
-		
-		if (e.target.closest(`.${this.btn_l}`)) {
-			this.moveList('left');
-		} else if (e.target.closest(`.${this.btn_r}`)) {
-			this.moveList('right');
-		}
-	}
 	addEvent() {
-		this.slider.addEventListener('mouseup', this.event);
+		this.slider.addEventListener('mouseup', (e)=>{
+			if (e.target.closest(`.${this.btn_l}`)) {
+				this.moveList('left');
+			} else if (e.target.closest(`.${this.btn_r}`)) {
+				this.moveList('right');
+			}
+		});
 	}
 	removeEvent() {
-		this.slider.removeEventListener('mouseup', this.event);
+		this.slider.removeEventListener('mouseup', this.removeEventListener);
+
 	}
 	resize() {
-		window.addEventListener(`resize`, event => {
+		window.addEventListener(`resize`, ev => {
 			this.list.style.left = 0;
 			this.list.style.transform = 'translateX(0)'
 		}, false);

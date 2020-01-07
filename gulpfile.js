@@ -39,7 +39,7 @@ let path = {
 		src: 'src/',
 		components: 'src/components/',
 		html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-		js: 'src/script/**/*.js',//В стилях и скриптах нам понадобятся только main файлы
+		js: 'src/script/*.js',//В стилях и скриптах нам понадобятся только main файлы
 		scss: 'src/scss/style.scss',
 		css: 'src/css/**/*.css',
 		img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
@@ -82,6 +82,7 @@ gulp.task('default', ['build', 'server'], () => {
 	gulp.watch(path.watch.scss, ['sass']);
 	gulp.watch(path.watch.css, ['style']);
 	gulp.watch(path.watch.js, ['script']);
+	gulp.watch(path.watch.js, ['scriptIE']);
 	gulp.watch(path.watch.img, ['img']);
 });
 //-------------- для запуска версии prodaction-----------------
@@ -93,7 +94,7 @@ gulp.task('prod', ['cleanProd'], () => {
 		.pipe(gulp.dest(path.produc));
 });
 //Сборка проекта
-gulp.task('build', ['clean', 'htmlmin', 'sass', 'style', 'script', 'img'], () => {
+gulp.task('build', ['clean', 'htmlmin', 'sass', 'style', 'script','scriptIE', 'img'], () => {
 	gulp.src(path.src.fonts)
 		.pipe(gulp.dest(path.build.fonts));
 	gulp.src(path.src.src + '/*.json')
@@ -165,7 +166,7 @@ gulp.task('style', () => {
 
 //script
 gulp.task('script', () => {
-	gulp.src('path.src.js')
+	gulp.src(path.src.js)
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		.pipe(rigger())
@@ -176,20 +177,23 @@ gulp.task('script', () => {
 		// .pipe(gulpif(argv.prod, uglify()))//минимазция js
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
 		.pipe(gulp.dest(path.build.js))
-	// .pipe(browserSync.reload({stream:true})); //незачем
+	.pipe(browserSync.reload({stream:true})); //незачем
+ 	 
+});
+gulp.task('scriptIE',()=>{
 	gulp.src('src/script/script.js')
-		.pipe(sourcemaps.init())
-		.pipe(plumber())
+		// .pipe(sourcemaps.init())
+		// .pipe(plumber())
 		.pipe(rigger())
-		// .pipe(concat('script.js'))
 		.pipe(babel({
 			presets: ['@babel/env']
 		}))
+		.pipe(rename('script_IE.js'))
 		// .pipe(gulpif(argv.prod, uglify()))//минимазция js
-		.pipe(gulpif(!argv.prod, sourcemaps.write()))
-		.pipe(gulp.dest('build/script/script_IE.js'))
-	// .pipe(browserSync.reload({stream:true})); //незачем 
-});
+		// .pipe(gulpif(!argv.prod, sourcemaps.write()))
+		.pipe(gulp.dest(path.build.js))
+	// .pipe(browserSync.reload({stream:true})); //незачем
+})
 
 gulp.task('server', () => {
 	browserSync({
