@@ -165,7 +165,7 @@ gulp.task('style', () => {
 
 //script
 gulp.task('script', () => {
-	gulp.src(path.src.js)
+	gulp.src('path.src.js')
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		.pipe(rigger())
@@ -177,6 +177,18 @@ gulp.task('script', () => {
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
 		.pipe(gulp.dest(path.build.js))
 	// .pipe(browserSync.reload({stream:true})); //незачем
+	gulp.src('src/script/script.js')
+		.pipe(sourcemaps.init())
+		.pipe(plumber())
+		.pipe(rigger())
+		// .pipe(concat('script.js'))
+		.pipe(babel({
+			presets: ['@babel/env']
+		}))
+		// .pipe(gulpif(argv.prod, uglify()))//минимазция js
+		.pipe(gulpif(!argv.prod, sourcemaps.write()))
+		.pipe(gulp.dest('build/script/script_IE.js'))
+	// .pipe(browserSync.reload({stream:true})); //незачем 
 });
 
 gulp.task('server', () => {
@@ -234,10 +246,10 @@ gulp.task('clean', () => {
 gulp.task('cleanProd', () => {
 	del.sync(
 		["../poliakh.github.io/myportfolio/site/itcreative_test/css",
-			"../poliakh.github.io/myportfolio//site/itcreative_test/fonts",
-			"../poliakh.github.io/myportfolio//site/itcreative_test/img",
-			"../poliakh.github.io/myportfolio//site/itcreative_test/script",
-			"../poliakh.github.io/myportfolio/index.html"],
+			"../poliakh.github.io/myportfolio/site/itcreative_test/fonts",
+			"../poliakh.github.io/myportfolio/site/itcreative_test/img",
+			"../poliakh.github.io/myportfolio/site/itcreative_test/script",
+			"../poliakh.github.io/myportfolio/site/itcreative_test/index.html"],
 		{ 'force': true });
 });
 

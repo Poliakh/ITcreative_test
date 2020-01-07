@@ -1,0 +1,61 @@
+/*----- popup start-----*/
+
+.popup {
+	display: flex;
+	width: 100%;
+	min-height: 100%;
+	background-color: #000000d7;
+	overflow: hidden;
+	position: fixed;
+	top: 0px;
+	z-index: 100;
+}
+.popup-hide{
+	visibility: hidden;
+}
+.popup__slider{
+	margin: auto;
+	border-radius: 3px;
+	box-shadow: 5px 5px 30px 5px #3838384d;
+	position: relative;
+	/* height: 500px;
+	width: 88vw; */
+	display: flex;
+	overflow: hidden;
+	width: 80vw;
+
+}
+.popup__btn{
+	/* background-color: rgba(255, 0, 0, 0.205); */
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 40%;
+}
+.popup__btn-r{
+	left:initial;
+	right: 0;
+	width: 60%;
+
+}
+.popup__btn:hover{
+	cursor: pointer;
+}
+.popup__list{
+	display: flex;
+	/* position: absolute; */
+	flex-wrap: nowrap;
+	/* width: 80vw; */
+	transition: left 0.5s ease;
+	position: relative;
+}
+.popup__list-hide{
+	display: none;
+}
+
+.popup__img{
+	width: 80vw;
+	height: auto;
+	margin-right: 50px;
+}

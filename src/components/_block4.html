@@ -9,22 +9,22 @@
 					<div class="cardSlide__saleval">60%</div>
 				</div>
 				<div class="cardSlide__control">
-					<button class="cardSlide__but">
+					<button class="cardSlide__but btnLeft">
 						<svg class="cardSlide__symb">
 							<use xlink:href="#larr"></use>
 						</svg>
 					</button>
-					<button class="cardSlide__but">
+					<button class="cardSlide__but btnRight">
 						<svg class="cardSlide__symb">
 							<use xlink:href="#rarr"></use>
 						</svg>
 					</button>
 				</div>
 			</div>
-			<img src="./img/Photo/layer_black@1X.png" alt="Туфли черные" class="cardSlide__img">
-			<img src="./img/Photo/layer_brown@1X.png" alt="Туфли красные" class="cardSlide__img front">
-			<img src="./img/Photo/top_brown@1X.png" alt="Туфли красные" class="cardSlide__outimg front">
-			<img src="./img/Photo/top_black@1X.png" alt="Туфли красные" class="cardSlide__outimg">
+			<img data-colorBG="black" src="./img/Photo/layer_black@1X.png" alt="Туфли черные" class="cardSlide__img">
+			<img data-colorBG="red" src="./img/Photo/layer_brown@1X.png" alt="Туфли красные" class="cardSlide__img front">
+			<img data-colorBG="red" src="./img/Photo/top_brown@1X.png" alt="Туфли красные" class="cardSlide__outimg front">
+			<img data-colorBG="black" src="./img/Photo/top_black@1X.png" alt="Туфли красные" class="cardSlide__outimg">
 			//= ./_cardBy__slider.html
 		</div>
 		<!-- 	start	select__cardBy -->
@@ -32,10 +32,11 @@
 		<div class="select__cardBy cardBy">
 			<div class="cardBy__desc">
 				<div class="cardBy__head">
-					<svg class="cardBy__logo  cardBy__logo-s">
+					<svg class="cardBy__logo cardBy__logo-s">
 						<use xlink:href="#ECCO_Logo"></use>
 					</svg>
-					<h4 class="cardBy__header">Lorem ipsum dolor</h4>
+					<h4 data-colorhd="red" class="cardBy__header cardBy__header-hide">SOFT 8 Red(7601)</h4>
+					<h4 data-colorhd="black" class="cardBy__header ">SOFT 8 Black(7600)</h4>
 				</div>
 				<div class="cardBy__cost">
 					<span class="cardBy__cost-old">3690 грн</span><span class="cardBy__cost-new">1379 грн</span>
@@ -109,12 +110,12 @@
 				</div>
 
 				<div class="cardSlide__control cardSlide__control-pur">
-					<button class="cardSlide__but">
+					<button class="cardSlide__but btnLeft">
 						<svg class="cardSlide__symb">
 							<use xlink:href="#larr"></use>
 						</svg>
 					</button>
-					<button class="cardSlide__but">
+					<button class="cardSlide__but btnRight">
 						<svg class="cardSlide__symb">
 							<use xlink:href="#rarr"></use>
 						</svg>
@@ -124,10 +125,9 @@
 			<div class="cardSlide__sliderspray sliderSpray">
 				<div class="sliderSpray__wrapper">
 					<img class="sliderSpray__img" src="./img/spray1.png" alt="Спрей для обуви хороший">
-					<img class="cardSlide__spray" src="./img/spray2.png" alt="Спрей для обуви совсем хорший">
+					<img class="sliderSpray__img" src="./img/spray2.png" alt="Спрей для обуви совсем хорший">
 				</div>
 			</div>
-
 		</div>
 
 		<div class="cardBy purchase__cardBy">

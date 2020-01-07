@@ -1,122 +1,90 @@
-class Slider {
-	constructor(slider, list, img, btn_l, btn_r, indicate, timeout) {
-		this.slider = document.querySelector(`.${slider}`);
-		this.list = document.querySelector(`.${list}`);
-		this.img = img;
-		this.listImg = this.list.querySelectorAll(`.${this.img}`);
-		this.listCopy = [].slice.call(this.listImg);
+//= modules/slider.js
+//= modules/popup.js
+
+
+const slider = new Slider('slider', 'slider__list', 'slider__img', 'btnLeft', 'btnRight', 'slider__indicat', 300);
+
+const sliderSpray = new Slider('purchase__cardSlide', 'sliderSpray__wrapper', 'sliderSpray__img', 'btnLeft', 'btnRight', null, 300);
+
+const sliderPopup = new Slider('popup__slider', 'popup__list', 'popup__img', 'btnLeft', 'btnRight', null, 500);
+
+//select__cardSlide
+class SelectShoe {
+	constructor(wrapper, btn_l, btn_r, wrapShoeSelect, btnListDesc, color) {
+		this.wrapper = document.querySelector(`.${wrapper}`);
 		this.btn_l = btn_l;
 		this.btn_r = btn_r;
-		this.timeout = timeout;
-		this.indicate = this.slider.querySelector(`.${indicate}`);
-		this.addEvent();
-		this.resize();
-		this.indicateInit();
+		this.wrapShoe = this.wrapper.querySelector(`.${wrapShoeSelect}`);
+		this.btnOrder = btnListDesc;
+		this.color = color;
+		this.addEventOrder();
+		this.addEventSlide();
 	}
-
-	indicateInit() {
-		const clonElem = this.indicate.firstElementChild.cloneNode();
-		this.classNameActive = clonElem.className + '-active';
-		while (this.indicate.firstChild) {
-			this.indicate.removeChild(this.indicate.firstChild);
-		}
-		const fragment = document.createDocumentFragment();
-		for (let i = 0; i < this.listImg.length; i++) {
-			fragment.appendChild(clonElem.cloneNode());
-		}
-		this.indicate.append(fragment);
-		this.indicate.firstElementChild.classList.add(this.classNameActive);
-	}
-	indicateActive(action){
-		if (action == 'next') {
-			const elem = this.indicate.querySelector(`.${this.classNameActive}`);
-			elem.classList.remove(this.classNameActive);
-			if(elem.nextElementSibling){
-				elem.nextElementSibling.classList.add(`${this.classNameActive}`);
-			}else{
-				this.indicate.firstElementChild.classList.add(`${this.classNameActive}`);
+	actionBG(dir) {
+		const elem = this.wrapShoe.querySelector(".front");
+		const color = elem.getAttribute('data-colorbg');
+		const newColor = this.getColor(`${color}`, dir);
+		const list = this.wrapShoe.querySelectorAll('[data-colorbg]');
+		for (let i = 0; i < list.length; i++) {
+			if (list[i].getAttribute('data-colorbg') == color) {
+				list[i].classList.remove('front');
+			} else if (list[i].getAttribute('data-colorbg') == newColor) {
+				list[i].classList.add('front');
 			}
-		}else if(action == 'prev'){
-			const elem = this.indicate.querySelector(`.${this.classNameActive}`);
-			elem.classList.remove(this.classNameActive);
-			if(elem.previousElementSibling){
-				elem.previousElementSibling.classList.add(`${this.classNameActive}`);
-			}else{
-				this.indicate.lastElementChild.classList.add(`${this.classNameActive}`);
+		}
+		this.actionElement('data-colorsl',color, newColor,'cardBy__slider-hide');
+		this.actionElement('data-colorhd',color, newColor,'cardBy__header-hide');
+	}
+	actionElement(data, color, newColor, toggleClass) {
+		const list = this.wrapper.querySelectorAll(`[${data}]`)
+		for (let i = 0; i < list.length; i++) {
+			if (list[i].getAttribute(data) == color) {
+				list[i].classList.add(toggleClass);
+			} else if (list[i].getAttribute(data) == newColor) {
+				list[i].classList.remove(toggleClass);
 			}
-
-		}
-
-	}
-
-	getwidthImage() {
-		const elem = this.list.querySelector(`.${this.img}`);
-		const computedStyle = getComputedStyle(elem);
-
-		return parseInt(computedStyle.marginRight) + elem.offsetWidth;
-	}
-	moveList(direction) {
-		const offset = this.getwidthImage();
-		const offsetLeft = (isNaN(parseInt(this.list.style.left))) ? 0 : parseInt(this.list.style.left);
-		if (direction == 'left') {
-			this.addAfter();
-			this.list.style.left = offsetLeft - offset + 'px';
-			setTimeout(() => {
-				const offsetComp = -(offsetLeft - offset) + 'px';
-				this.list.style.transform = 'translateX(' + offsetComp + ')';
-				this.addEvent();
-			}, this.timeout);
-			this.indicateActive('next');
-
-		} else if (direction == 'right') {
-			this.addBefore()
-			const offsetComp = - (offsetLeft + offset) + 'px';
-			this.list.style.transform = 'translateX(' + offsetComp + ')';
-			this.list.style.left = offsetLeft + offset + 'px';
-			this.removeEvent();
-			setTimeout(() => {
-				this.addEvent();
-			}, this.timeout)
-			this.indicateActive('prev')
 		}
 	}
-	addAfter() {
-		const firstElem = this.list.firstElementChild;
-		const cloneElem = firstElem.cloneNode();
-		this.list.appendChild(cloneElem);
-		this.removeEvent();
-		setTimeout(() => {
-			this.list.firstElementChild.remove();
-		}, this.timeout)
+	addEventSlide() {
+		this.wrapper.addEventListener('mouseup', (e) => {
+			if (e.target.closest(`.${this.btn_l}`)) {
+				this.actionBG('next');
+			} else if (e.target.closest(`.${this.btn_r}`)) {
+				this.actionBG('prev');
+			}
+		})
 	}
-	addBefore() {
-		const firstElem = this.list.firstElementChild;
-		const cloneLastElem = this.list.lastElementChild.cloneNode();
-		this.list.insertBefore(cloneLastElem, firstElem);
-		setTimeout(() => {
-			this.list.lastElementChild.remove();
-		}, this.timeout)
-	}
-	event = (e) => {
-		if (e.target.closest(`.${this.btn_l}`)) {
-			this.moveList('left');
-		} else if (e.target.closest(`.${this.btn_r}`)) {
-			this.moveList('right');
-		}
-	}
-	addEvent() {
-		this.slider.addEventListener('mouseup', this.event);
-	}
-	removeEvent() {
-		this.slider.removeEventListener('mouseup', this.event);
-	}
-	resize() {
-		window.addEventListener(`resize`, event => {
-			this.list.style.left = 0;
-			this.list.style.transform = 'translateX(0)'
-		}, false);
+	getColor(color, direct) {
+		let res;
+		this.color.forEach((element, i) => {
+			if (color == element && direct == "next") {
+				const index = ((i + 1) >= this.color.length) ? 0 : i + 1;
+				res = this.color[index];
+			}
+			else if (color === element && direct === "prev") {
+				const index = (i - 1 < 0) ? this.color.length - 1 : i - 1;
+				res = this.color[index];
+			}
+		});
+		return res;
 	}
 
-
+	addEventOrder() {
+		this.wrapper.addEventListener('mouseup', (e) => {
+			console.log(e.target);
+			const changeCard = () => {
+				const list = this.wrapper.querySelectorAll('.cardBy__wrapper');
+				for (let i = 0; i < list.length; i++) {
+					list[i].classList.toggle('hide')
+				}
+			}
+			if (e.target.closest(`.${this.btnOrder}`) || e.target.closest('.cardBy__back')) {
+				console.log('order');
+				changeCard()
+			}
+		});
+	}
 }
-const slider = new Slider('slider', 'slider__list', 'slider__img', 'btnLeft', 'btnRight', 'slider__indicat', 300)
+const select = new SelectShoe('select', 'btnLeft', 'btnRight', 'select__cardSlide', 'cardBy__button-list', ['red', 'black']);
+
+const myPopup = new Popup('popupRed','.cardBy__img', 'popup-hide' ,'cls','popup__slider',  true )
