@@ -71,4 +71,7 @@ class SelectShoe {
 			}
 		});
 	}
+	popupCheck(){
+		
+	}
 }
