@@ -56,7 +56,7 @@ let path = {
 	},
 	dir: 'build',
 	// produc:'../poliakh.github.io/myportfolio',
-	produc: 'C:/MyProject/Frontend - HOME/Portfolio/poliakh.github.io/myportfolio/site/itcreative_test',
+	produc: '../poliakh.github.io/myportfolio/site/itcreative_test',
 	test: 'test'
 };
 
