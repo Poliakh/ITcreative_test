@@ -23,6 +23,7 @@ class SelectShoe {
 		}
 		this.actionElement('data-colorsl',color, newColor,'cardBy__slider-hide');
 		this.actionElement('data-colorhd',color, newColor,'cardBy__header-hide');
+		this.actionElementOutSlider('data-colorpsl',color, newColor,'popup__list-hide');
 	}
 	actionElement(data, color, newColor, toggleClass) {
 		const list = this.wrapper.querySelectorAll(`[${data}]`)
@@ -31,6 +32,19 @@ class SelectShoe {
 				list[i].classList.add(toggleClass);
 			} else if (list[i].getAttribute(data) == newColor) {
 				list[i].classList.remove(toggleClass);
+			}
+		}
+	}
+	actionElementOutSlider(data, color, newColor, toggleClass) {
+		const list = document.querySelectorAll(`[${data}]`);
+
+		for (let i = 0; i < list.length; i++) {
+			if (list[i].getAttribute(data) == color) {
+				list[i].classList.add(toggleClass);
+				list[i].classList.remove('popup__list-check');
+			} else if (list[i].getAttribute(data) == newColor) {
+				list[i].classList.remove(toggleClass);
+				list[i].classList.add('popup__list-check');
 			}
 		}
 	}
@@ -72,6 +86,6 @@ class SelectShoe {
 		});
 	}
 	popupCheck(){
-		
+
 	}
 }

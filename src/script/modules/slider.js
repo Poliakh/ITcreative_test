@@ -1,6 +1,7 @@
 class Slider {
 	constructor(slider, list, img, btn_l, btn_r, indicate, timeout) {
 		this.slider = document.querySelector(`.${slider}`);
+		this.firstList = list;
 		this.list = document.querySelector(`.${list}`);
 		this.img = img;
 		this.listImg = this.list.querySelectorAll(`.${this.img}`);
@@ -12,7 +13,6 @@ class Slider {
 		this.addEvent();
 		this.resize();
 		this.indicateInit();
-		
 	}
 	indicateInit() {
 		if (this.indicate) {
@@ -55,7 +55,6 @@ class Slider {
 		const elem = this.list.querySelector(`.${this.img}`);
 		const computedStyle = getComputedStyle(elem);
 		return parseInt(computedStyle.marginRight) + elem.offsetWidth;
-
 	}
 
 	moveList(direction) {
@@ -71,7 +70,7 @@ class Slider {
 			}, this.timeout);
 			this.indicateActive('next');
 
-		}  else if (direction == 'right') {
+		} else if (direction == 'right') {
 			this.addBefore()
 			const offsetComp = - (offsetLeft + offset) + 'px';
 			this.list.style.transform = 'translateX(' + offsetComp + ')';
@@ -87,6 +86,7 @@ class Slider {
 	addAfter() {
 		const firstElem = this.list.firstElementChild;
 		const cloneElem = firstElem.cloneNode();
+		
 		this.list.appendChild(cloneElem);
 		this.removeEvent();
 		setTimeout(() => {
@@ -105,6 +105,8 @@ class Slider {
 	}
 	addEvent() {
 		this.slider.addEventListener('mouseup', (e)=>{
+			this.list = document.querySelector(`.${this.firstList}`);
+
 			if (e.target.closest(`.${this.btn_l}`)) {
 				this.moveList('left');
 			} else if (e.target.closest(`.${this.btn_r}`)) {
