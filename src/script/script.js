@@ -1,3 +1,15 @@
+function browser_name() {
+	var browser_id = navigator.userAgent;
+	if (browser_id.search(/MSIE/) != -1 || browser_id.search(/Trident/) != -1) return 'IE';
+}
+
+function addPolifil() {
+	if (browser_name() == 'IE') {
+	//= modules/polifil_closest.js
+	}
+}
+addPolifil()
+
 //= modules/slider.js
 //= modules/popup.js
 //= modules/select.js
@@ -17,3 +29,4 @@ const myPopup = new Popup('popupRed', '.cardBy__img', 'popup-hide', 'cls', 'popu
 
 
 const infSlider = new InfSlider('info__list', 'info__item', 'info__item-check', 'info__cont', 'slideInfo-vis');
+
